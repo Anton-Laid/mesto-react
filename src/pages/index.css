@@ -1,0 +1,70 @@
+@import url('../vendor/normalize.css');
+
+@import url('../vendor/fonts/fonts.css');
+
+@import url('../blocks/body/body.css');
+
+@import url('../blocks/page/page.css');
+
+@import url('../blocks/header/header.css');
+@import url('../blocks/header/__logo/header__logo.css');
+
+/* Информация пользователя */
+
+@import url('../blocks/profile/profile.css');
+@import url('../blocks/profile/__info/profile__info.css');
+@import url('../blocks/profile/__button/profile__button.css');
+@import url('../blocks/profile/__image/profile__image.css');
+@import url('../blocks/profile/__subtitle/profile__subtitl.css');
+@import url('../blocks/profile/__title/profile__title.css');
+@import url('../blocks/profile/__rectangle/profile__rectangle.css');
+@import url('../blocks/profile/__vector/profile__vector.css');
+@import url('../blocks/profile/__avatar/profile__avatar.css');
+@import url('../blocks/profile/__avatar-image.css/avatar-image.css');
+@import url('../blocks/profile/__avatar-button/avatar-button.css');
+@import url('../blocks/profile/__button/__plus/profile__button-plus.css');
+
+/* Карточки */
+
+@import url('../blocks/photos/photos.css');
+@import url('../blocks/photo/photo.css');
+@import url('../blocks/photo/__box/photo__box.css');
+@import url('../blocks/photo/__like/photo__like.css');
+@import url('../blocks/photo/__like/__active/photo__like_active.css');
+@import url('../blocks/photo/__image/photo__image.css');
+@import url('../blocks/photo/__title/photo__title.css');
+@import url('../blocks/photo/__removel/photo__removel.css');
+@import url('../blocks/photo/__like/__like-sum/photo__like-sum.css');
+@import url('../blocks/photo/__removel/__removel-active/photo__removel-active.css');
+
+/* Popup */
+
+@import url('../blocks/popup/__button/popup__button.css');
+@import url('../blocks/popup/__close/popup__buttom-close.css');
+@import url('../blocks/popup/__input/popup__input.css');
+@import url('../blocks/popup/__label/popup__label.css');
+@import url('../blocks/popup/__title/popup__title.css');
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/_opened/popup_opened.css');
+@import url('../blocks/popup/__input/__error/popup__input_type_error.css');
+@import url('../blocks/popup/__button/__active/popup__button-active.css');
+
+/* popup увеличения изображения */
+@import url('../blocks/popup-foto/__box/popup-foto__box.css');
+@import url('../blocks/popup-foto/__images/popup-foto__images.css');
+@import url('../blocks/popup-foto/__title/popup-foto__title.css');
+@import url('../blocks/popup-foto/_opened/popup-foto_opened.css');
+@import url('../blocks/popup-foto/popup__foto.css');
+
+/* popup изменение аватара */
+
+/* popup для подтверждения удаления карточки */
+@import url('../blocks/popup/__container/popup__container.css');
+
+/* footer */
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/footer/__copyright/footer__copyright.css');
+
+@import url('../blocks/form/form.css');
+@import url('../blocks/form/__input-error/form__input-error.css');
+@import url('../blocks/form/__input-error/__active/form__input-error-active.css');

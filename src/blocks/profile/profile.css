@@ -1,0 +1,25 @@
+.profile {
+    width: 282px;
+    height: 288px;
+    margin: 42px auto 0;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+@media (min-width:340px) {
+    .profile {
+        margin: 42px auto;
+    }
+}
+
+@media (min-width:1024px) {
+    .profile {
+        margin-top: 36px;
+        width: 880px;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,18 @@
+.photo__removel {
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-size: cover;
+  background-image: url(../../../images/remove-button.svg);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
+
+.photo__removel:hover {
+  opacity: 0.5;
+}

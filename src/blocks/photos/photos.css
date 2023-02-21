@@ -1,0 +1,31 @@
+.photos {
+  width: 282px;
+  margin: 36px auto 48px;
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 414px) {
+  .photos {
+    margin: 30px auto 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .photos {
+    margin: 30px auto 0;
+    width: 680px;
+    grid-template-columns: repeat(2, 288px);
+    justify-content: space-around;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .photos {
+    width: 880px;
+    grid-template-columns: repeat(3, 288px);
+    gap: 20px 17px;
+    margin: 48px auto 66px;
+  }
+}

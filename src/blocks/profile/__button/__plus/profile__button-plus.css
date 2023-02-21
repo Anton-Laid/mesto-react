@@ -1,0 +1,7 @@
+.profile__button-plus {
+  margin: auto;
+  width: 22px;
+  height: 22px;
+  background-image: url(../../../../images/Vector__plus.png);
+  background-repeat: no-repeat;
+}

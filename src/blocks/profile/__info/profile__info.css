@@ -1,0 +1,15 @@
+.profile__info {
+    width: 282px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+@media (min-width:1280px) {
+    .profile__info {
+        margin: 22px 0 25px 35px;
+        width: 336px;
+        height: 73px;
+    }
+}

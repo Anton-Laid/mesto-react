@@ -1,0 +1,22 @@
+.popup-foto__images {
+  max-width: 240px;
+  height: 300px;
+  transition: 0.3s ease-in-out;
+  margin: auto;
+  background-image: url(../../../images/photo-city.jpg);
+  background-size: cover;
+}
+
+@media (min-width: 570px) {
+  .popup-foto__images {
+    max-width: 450px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .popup-foto__images {
+    max-width: 816px;
+    height: 540px;
+  }
+}

@@ -1,0 +1,14 @@
+.photo__image {
+    width: 100%;
+    margin-top: 0;
+    height: 283px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.photo__image:hover {
+    cursor: pointer;
+}

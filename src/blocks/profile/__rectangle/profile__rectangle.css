@@ -1,0 +1,24 @@
+.profile__rectangle {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 8px;
+  right: 19px;
+  cursor: pointer;
+  margin-top: 22px;
+}
+
+.profile__rectangle:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 1024px) {
+  .profile__rectangle {
+    width: 24px;
+    height: 24px;
+    top: 15px;
+    right: 0;
+  }
+}

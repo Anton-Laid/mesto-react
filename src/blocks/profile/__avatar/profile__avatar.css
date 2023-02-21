@@ -1,0 +1,10 @@
+.profile__avatar {
+  width: 120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: url(../../../images/userAvatar.jpg);
+  background-size: cover;
+  border-radius: 50%;
+}

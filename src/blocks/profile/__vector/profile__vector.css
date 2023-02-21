@@ -1,0 +1,15 @@
+.profile__vector {
+  width: 8px;
+  height: 8px;
+  margin: 5px -2px;
+  background-image: url(../../../images/Vector__pensol.png);
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  .profile__vector {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+  }
+}

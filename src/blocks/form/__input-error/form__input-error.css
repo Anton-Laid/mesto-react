@@ -1,0 +1,14 @@
+.form__input-error {
+    opacity: 0;
+    display: block;
+    width: 70%;
+    height: 30px;
+    margin: 5px 22px 15px;
+}
+
+@media (min-width: 1024px) {
+    .form__input-error {
+        width: 358px;
+        margin-left: 36px;
+    }
+}

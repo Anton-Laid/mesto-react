@@ -1,0 +1,8 @@
+.photo__box {
+    width: 246px;
+    height: 33px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 24px 0 30px 21px;
+}

@@ -1,0 +1,15 @@
+.form {
+    width: 282px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+@media (min-width:1024px) {
+    .form {
+        width: 430px;
+    }
+}
