@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+**Mesto**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### на React
 
-## Available Scripts
+Была прославлена задача сделать замену приложения ins\*\*\* Пользователь может зайти, авторизоваться под своим именем и загрузить свои фотографии и подписать их 💜
 
-In the project directory, you can run:
+Выполнены следующие задачи:
 
-### `npm start`
+**_1. Контекст текущего пользователя_**
+Данные текущего пользователя нужны в разных местах приложения: например, чтобы определить может ли пользователь удалять карточку.
+Мы будем использовать контекст, чтобы все компоненты приложения могли получить доступ к этим данным.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Создайте стейт currentUser в корневом компоненте
+2. Создайте объект контекста и используйте провайдер
+3. Используем контекст в Main
+4. Используем контекст в Card
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**_2. Лайки и удаление карточек_**
 
-### `npm test`
+1. Добавьте поддержку лайков и дизлайков
+2. Добавьте поддержку удаления карточки
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**_3. Редактирование профиля_**
 
-### `npm run build`
+1. Рефакторинг: Вынесите компонент EditProfilePopup
+2. Добавьте управляемые компоненты
+3. Используйте значения по умолчанию из currentUser
+4. Сохраняйте данные в API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**_4. Редактирование аватара_**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Рефакторинг: Вынесите компонент EditAvatarPopup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**_5. Добавление новой карточки_**
 
-### `npm run eject`
+1. Поднимаем стейт cards
+2. Рефакторинг
+3. Сохраните данные
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**_Дополнительные функции_**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Сделано закрытие попапа вне поля
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**_Дальнешние дорабртки_**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Сделать валидацию формы
+2. При неверном вводе информации input, блокировать кнопку.
+3. При нажатии на урну выводить окно с подтверждением удаления карточки
