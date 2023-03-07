@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Card from './Card';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 function Main(props) {
-  const { onEditAvatar, onEditProfile, onEditAddPhoto, onCardClick } = props;
+  const {
+    onEditAvatar,
+    onEditProfile,
+    onEditAddPhoto,
+    onCardClick,
+    cards,
+    handleCardLike,
+    handleCardDelete,
+  } = props;
 
-  const { currentUser, cards, handleCardLike } =
-    React.useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
 
   return (
     <main className="content">
       <section className="profile">
-        {/* // */}
+        {/* */}
         <div
           className="profile__avatar"
           style={{ backgroundImage: `url(${currentUser.avatar})` }}
@@ -20,7 +27,7 @@ function Main(props) {
           <div className="profile__avatar-image"></div>
           <button className="profile__avatar-button" type="button"></button>
         </div>
-        {/* // */}
+        {/* */}
         <div className="profile__info">
           <h1 className="profile__title">{currentUser.name}</h1>
           <p className="profile__subtitle">{currentUser.about}</p>
@@ -32,7 +39,7 @@ function Main(props) {
             <div className="profile__vector"></div>
           </button>
         </div>
-        {/* // */}
+        {/* */}
         <button
           type="button"
           className="profile__button"
@@ -41,7 +48,7 @@ function Main(props) {
           <div className="profile__button-plus"></div>
         </button>
       </section>
-      {/* // */}
+      {/* */}
       <section className="photos">
         {cards.map((card) => {
           return (
@@ -51,6 +58,7 @@ function Main(props) {
               currentUser={currentUser}
               onCardClick={onCardClick}
               handleCardLike={handleCardLike}
+              handleCardDelete={handleCardDelete}
             />
           );
         })}

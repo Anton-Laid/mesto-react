@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -11,8 +11,7 @@ import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 function App() {
   // Открытие popup Avatar
-  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] =
-    React.useState(false);
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
 
   // Обнуление и передача input Avatar
   const handleEditAvatarClick = () => {
@@ -20,30 +19,29 @@ function App() {
   };
 
   // Открытие popup Обновить профиль
-  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] =
-    React.useState(false);
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
   // Обнуление и передача input Обновить профиль
   const handleEditProfileClick = () => {
     setIsEditProfilePopupOpen(!isEditProfilePopupOpen);
   };
 
   // Открытие popup для добавления фото
-  const [isEditPhotoPopupOpen, setIsEditPhotoPopupOpen] = React.useState(false);
+  const [isEditPhotoPopupOpen, setIsEditPhotoPopupOpen] = useState(false);
   // Закрытие popup для добавления фото
   const handleEditPhotoClick = () => {
     setIsEditPhotoPopupOpen(!isEditPhotoPopupOpen);
   };
   // Объект карточек
-  const [selectedCard, setSelectedCard] = React.useState({});
+  const [selectedCard, setSelectedCard] = useState({});
   // Обновление объекта карточек
   const handleCardClick = (card) => {
     setSelectedCard(card);
   };
   // Получение {} с инф пользователя
-  const [currentUser, setCurrentUser] = React.useState({});
+  const [currentUser, setCurrentUser] = useState({});
 
   // Получение [] карточек
-  const [cards, setCards] = React.useState([]);
+  const [cards, setCards] = useState([]);
 
   // Работа с лайками
   function handleCardLike(card) {
@@ -111,7 +109,7 @@ function App() {
       });
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     Promise.all([api.getInfoUser(), api.getCardsList()])
       .then(([userData, dataCards]) => {
         setCurrentUser(userData);
@@ -124,19 +122,15 @@ function App() {
 
   return (
     <>
-      <CurrentUserContext.Provider
-        value={{
-          currentUser,
-          cards,
-          handleCardLike,
-          handleCardDelete,
-        }}
-      >
+      <CurrentUserContext.Provider value={currentUser}>
         <Header />
         <Main
           onEditAvatar={handleEditAvatarClick}
           onEditProfile={handleEditProfileClick}
           onEditAddPhoto={handleEditPhotoClick}
+          cards={cards}
+          handleCardLike={handleCardLike}
+          handleCardDelete={handleCardDelete}
           onCardClick={(card) => handleCardClick(card)}
         />
         <Footer />
@@ -159,11 +153,7 @@ function App() {
           opUpdataCard={opUpdataCard}
         />
 
-        <ImagePopup
-          onClose={() => handleCardClick({})}
-          isOpen={selectedCard}
-          currentUser={currentUser}
-        />
+        <ImagePopup onClose={() => handleCardClick({})} card={selectedCard} />
       </CurrentUserContext.Provider>
     </>
   );

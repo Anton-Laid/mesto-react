@@ -1,17 +1,9 @@
 import PopupWithForm from './PopupWithForm';
 import React from 'react';
-import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 function AddPlacePopup({ isOpen, onClose, opUpdataCard }) {
   const [name, setName] = React.useState('');
   const [link, setLink] = React.useState('');
-
-  const currentUser = React.useContext(CurrentUserContext);
-
-  React.useEffect(() => {
-    setName(currentUser.name);
-    setLink(currentUser.link);
-  }, [currentUser]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -19,6 +11,8 @@ function AddPlacePopup({ isOpen, onClose, opUpdataCard }) {
       name,
       link,
     });
+    setName('');
+    setLink('');
   }
 
   return (
@@ -28,6 +22,7 @@ function AddPlacePopup({ isOpen, onClose, opUpdataCard }) {
       name="add"
       onClose={onClose}
       onSubmit={handleSubmit}
+      btnText="Создать"
     >
       <input
         id="form-title"
@@ -56,10 +51,6 @@ function AddPlacePopup({ isOpen, onClose, opUpdataCard }) {
         onChange={(e) => setLink(e.target.value)}
       />
       <span className="form-img-error form__input-error"></span>
-
-      <button className="popup__button" type="submit">
-        Создать
-      </button>
     </PopupWithForm>
   );
 }
